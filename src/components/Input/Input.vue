@@ -1,6 +1,11 @@
 <template>
-    <div class="container">
-        <input class="container__input" placeholder="Von" />
+    <div class="center">
+        <div class="inputbox">
+            <input type="text" class="inputbox__input"/>
+            <div class="inputbox_labelholder">
+                <span class="inputbox__label">Von</span>
+            </div>
+        </div>
     </div>
 </template>
 
