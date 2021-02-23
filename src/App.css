@@ -25,3 +25,9 @@ body{
     width: 100%;
     overflow: auto;
 }
+
+.inputpositioner {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15vh;
+  }

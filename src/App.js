@@ -1,8 +1,8 @@
-import Input from './components/Input/Input.vue'
+import DepartureInput from './components/DepartureInput/DepartureInput.vue'
 
 export default {
   name: 'App',
   components: {
-    Input
+    DepartureInput
   }
 }

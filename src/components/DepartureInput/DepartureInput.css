@@ -1,0 +1,137 @@
+.inputcontainer {
+  position: relative;
+  height: 48px;
+  width: 327px;
+  margin: 0 auto;
+}
+
+.inputcontainer__input {
+  outline: none;
+  height: 100%;
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid #999999;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.75px;
+  color: #333333;
+  padding: 14px 48px 14px 24px;
+  caret-color: #19AC63;
+}
+
+.inputcontainer__bordercover {
+  position: absolute;
+  top: -9px;
+  width: 0px;
+  height: 18px;
+  left: 18px;
+  transition: 0.2s ease all;
+  background-color: white;
+}
+
+.inputcontainer__labelholder {
+  position: absolute;
+  width: 38px;
+  height: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 19px;
+  transition: 0.3s ease all;
+  background-color: transparent;
+  pointer-events: none
+}
+
+.inputcontainer__label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition: 0.2s ease all;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.75px;
+  color: #999999;
+}
+
+.inputcontainer__clearbutton {
+  position: absolute;
+  top: 50%;
+  right: 24px;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  background: url(../../assets/clear.svg) no-repeat center center;
+  background-size: 16px;
+  padding: 0;
+  border: none;
+  background-color: white;
+  outline: none;
+  visibility: hidden;
+}
+
+.inputcontainer__input:focus {
+  border: 1px solid #19AC63;
+}
+
+.inputcontainer__input:focus ~ .inputcontainer__bordercover,
+.inputcontainer__input:not(:focus):valid ~ .inputcontainer__bordercover {
+  width: 38px;
+}
+
+.inputcontainer__input:focus ~ .inputcontainer__labelholder .inputcontainer__label {
+  color: #19AC63;
+}
+
+.inputcontainer__input:focus ~ .inputcontainer__labelholder .inputcontainer__label,
+.inputcontainer__input:not(:focus):valid ~ .inputcontainer__labelholder .inputcontainer__label {
+  font-size: 12px;
+}
+
+.inputcontainer__input:focus ~ .inputcontainer__labelholder,
+.inputcontainer__input:not(:focus):valid ~ .inputcontainer__labelholder {
+  top: 0;
+}
+
+.inputcontainer__input:valid ~ .inputcontainer__clearbutton{
+  visibility: visible;
+}
+
+.suggestioncontainer {
+  position: relative;
+  width: 327px;
+  height: 180px;
+  margin: 0 auto;
+  margin-top: 32px;
+  overflow: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  visibility: hidden;
+}
+
+.suggestioncontainer::-webkit-scrollbar {
+  display: none;
+}
+
+.suggestioncontainer__suggestionlist {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.suggestioncontainer__suggestion {
+  background: url('../../assets/train.svg') no-repeat left top;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.75px;
+  color: #999999;
+  padding: 0px 0px 32px 48px;
+}
+
+.suggestioncontainer__suggestion::marker {
+  margin: 50px;
+}
+
+.sl-keyword {
+  color: #19AC63;
+}

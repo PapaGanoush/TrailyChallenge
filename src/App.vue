@@ -1,5 +1,7 @@
 <template>
-  <Input></Input>
+<div class="inputpositioner">
+<DepartureInput></DepartureInput>
+</div>
 </template>
 
 <script src="./App.js" />
